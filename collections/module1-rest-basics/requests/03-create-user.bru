@@ -1,0 +1,56 @@
+meta {
+  name: Create New User
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/module1/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "role": "student"
+  }
+}
+
+docs {
+  # Create New User - POST Request
+
+  This request demonstrates how to create new resources using the POST method. You're sending data to the server to create a new user.
+
+  ## What you'll learn:
+  - POST method for creating resources
+  - Request body with JSON data
+  - Server response to successful creation
+
+  ## Try it:
+  1. Send the request as-is to create a user named "John Doe"
+  2. Modify the JSON body to create a user with your name
+  3. Try sending without a "name" field to see validation error
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "User created successfully",
+    "user": {
+      "id": 4,
+      "name": "John Doe",
+      "role": "student",
+      "created_at": "2024-01-01T12:00:00"
+    }
+  }
+  ```
+
+  ## Key Concepts:
+  - **POST**: Creates new resources on the server
+  - **Request Body**: Data sent to the server
+  - **JSON**: Structured data format
+  - **Validation**: Server checks if required data is provided
+
+  ## Exercise:
+  Create a user with your own name and role. What happens if you don't include a name?
+}

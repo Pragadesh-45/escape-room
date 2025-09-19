@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "escape-room",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

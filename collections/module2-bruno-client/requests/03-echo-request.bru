@@ -1,0 +1,78 @@
+meta {
+  name: Echo Request
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/module2/echo
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message": "Hello from Bruno!",
+    "student": "Your Name Here",
+    "workshop": "API Escape Room"
+  }
+}
+
+headers {
+  Content-Type: application/json
+  X-Workshop-Module: 2
+}
+
+docs {
+  # Echo Request - Understanding Request Structure
+
+  This request demonstrates how Bruno sends complete request information to the server, including body and headers.
+
+  ## Bruno Request Structure:
+
+  ### 1. Method Selection
+  - Choose from GET, POST, PUT, DELETE, PATCH, etc.
+  - Bruno shows method-specific options
+
+  ### 2. URL Construction
+  - Use environment variables: {{baseUrl}}
+  - Direct URL entry
+  - Query parameters support
+
+  ### 3. Request Body
+  - **JSON**: Structured data (most common)
+  - **Form Data**: Key-value pairs
+  - **Raw**: Plain text or other formats
+  - **None**: For GET requests
+
+  ### 4. Headers
+  - Authentication headers
+  - Content type specification
+  - Custom headers
+
+  ## Try it:
+  1. Send the request as-is
+  2. Modify the JSON body with your information
+  3. Add more headers
+  4. Change the HTTP method to PUT
+
+  ## Expected Response:
+  ```json
+  {
+    "method": "POST",
+    "body": {
+      "message": "Hello from Bruno!",
+      "student": "Your Name Here",
+      "workshop": "API Escape Room"
+    },
+    "headers": {
+      "content-type": "application/json",
+      "x-workshop-module": "2"
+    },
+    "timestamp": "2024-01-01T12:00:00"
+  }
+  ```
+
+  ## Exercise:
+  Change the student name to your actual name and add a header with your favorite programming language.
+}

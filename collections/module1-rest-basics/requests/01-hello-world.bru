@@ -1,0 +1,40 @@
+meta {
+  name: Hello World
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/module1/hello
+  body: none
+  auth: none
+}
+
+docs {
+  # Hello World - Your First API Call
+
+  This is your first API request! This simple GET request demonstrates the basic structure of an API call.
+
+  ## What you'll learn:
+  - How to make a GET request
+  - Understanding API responses
+  - Basic request/response pattern
+
+  ## Try it:
+  1. Click the "Send" button
+  2. Observe the response in the Response panel
+  3. Notice the JSON structure returned
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "Hello, API Explorer!",
+    "timestamp": "2024-01-01T12:00:00"
+  }
+  ```
+
+  ## Key Concepts:
+  - **GET**: Retrieves data from the server
+  - **JSON**: JavaScript Object Notation - a common data format
+  - **Timestamp**: When the response was generated
+}

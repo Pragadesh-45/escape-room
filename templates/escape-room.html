@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Escape Room Challenge</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚪 API Escape Room Challenge</h1>
+            <p>Put your API skills to the test in this interactive escape room!</p>
+        </header>
+
+        <div id="start-form" class="escape-room-container">
+            <h2>Start Your Escape Room Journey</h2>
+            <p>Enter your information to begin the challenge. You'll have 5 puzzles to solve using Bruno and your API knowledge.</p>
+
+            <form class="player-form">
+                <div class="form-group">
+                    <label for="playerName">Your Name:</label>
+                    <input type="text" id="playerName" name="playerName" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="team">Team Name:</label>
+                    <input type="text" id="team" name="team" required placeholder="Enter your team name">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Start Challenge</button>
+            </form>
+        </div>
+
+        <div id="game-interface" style="display: none;">
+            <div class="escape-room-container">
+                <div id="player-info" class="player-info">
+                    <!-- Player information will be populated here -->
+                </div>
+
+                <div class="game-stats">
+                    <div class="stat-card">
+                        <h4>⏱️ Time</h4>
+                        <div id="timer">00:00</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>🎯 Score</h4>
+                        <div id="current-score">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h4>🧩 Puzzles</h4>
+                        <div id="puzzle-count">0/8</div>
+                    </div>
+                </div>
+
+                <div id="puzzle-container">
+                    <!-- Puzzle content will be populated here -->
+                </div>
+
+                <div id="response-container" style="display: none;">
+                    <!-- API responses will be shown here -->
+                </div>
+
+                <div class="puzzle-navigation">
+                    <button onclick="loadPuzzle(1)" class="btn puzzle-nav-btn" data-puzzle="1">🔍 Puzzle 1</button>
+                    <button onclick="loadPuzzle(2)" class="btn puzzle-nav-btn" data-puzzle="2">🔐 Puzzle 2</button>
+                    <button onclick="loadPuzzle(3)" class="btn puzzle-nav-btn" data-puzzle="3">📝 Puzzle 3</button>
+                    <button onclick="loadPuzzle(4)" class="btn puzzle-nav-btn" data-puzzle="4">🌐 Puzzle 4</button>
+                    <button onclick="loadPuzzle(5)" class="btn puzzle-nav-btn" data-puzzle="5">📚 Puzzle 5</button>
+                    <button onclick="loadPuzzle(6)" class="btn puzzle-nav-btn" data-puzzle="6">📁 Puzzle 6</button>
+                    <button onclick="loadPuzzle(7)" class="btn puzzle-nav-btn" data-puzzle="7">🌟 Puzzle 7</button>
+                    <button onclick="loadPuzzle(8)" class="btn puzzle-nav-btn" data-puzzle="8">🚀 Puzzle 8</button>
+                </div>
+
+                <div class="game-tools">
+                    <button onclick="showBrunoHelp()" class="btn btn-secondary">📖 Bruno Help</button>
+                    <button onclick="showAPIDocs()" class="btn btn-secondary">📚 API Docs</button>
+                    <button onclick="resetGame()" class="btn btn-secondary">🔄 Reset Game</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="workshop-overview">
+            <h2>Escape Room Rules</h2>
+            <ul>
+                <li><strong>Use Bruno:</strong> All API interactions must be done through Bruno</li>
+                <li><strong>Sequential Puzzles:</strong> Solve puzzles in order (1-8)</li>
+                <li><strong>Team Work:</strong> Collaborate with your team members</li>
+                <li><strong>Time Limit:</strong> Complete all puzzles as quickly as possible</li>
+                <li><strong>No Cheating:</strong> Use only the information provided in responses</li>
+            </ul>
+
+            <h3>Puzzle Types</h3>
+            <div class="puzzle-types">
+                <div class="puzzle-type">
+                    <h4>🔍 Header Analysis</h4>
+                    <p>Find hidden information in HTTP response headers</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>🔐 Authentication</h4>
+                    <p>Use tokens and authentication methods correctly</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>📝 Data Decoding</h4>
+                    <p>Decode encrypted or encoded information</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>🌐 HTTP Methods</h4>
+                    <p>Choose the correct HTTP method for the task</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>📚 Git Integration</h4>
+                    <p>Understand version control for API collections</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>📁 File Systems</h4>
+                    <p>Navigate Bruno's file-based approach</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>🌟 Open Source</h4>
+                    <p>Learn about Bruno's open source nature</p>
+                </div>
+                <div class="puzzle-type">
+                    <h4>🚀 Bruno Mastery</h4>
+                    <p>Master Bruno's advanced features</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="api-docs">
+            <h2>Need Help?</h2>
+            <p>Use these resources to help solve the puzzles:</p>
+            <a href="/docs" class="btn btn-secondary" target="_blank">API Documentation</a>
+            <a href="/module/1" class="btn btn-secondary">Module 1: REST Basics</a>
+            <a href="/module/2" class="btn btn-secondary">Module 2: Bruno Client</a>
+            <a href="/module/3" class="btn btn-secondary">Module 3: API Components</a>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

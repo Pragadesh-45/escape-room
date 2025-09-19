@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: API Client Components</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Module 3: API Client Components</h1>
+            <p>Deep dive into request methods, headers, body types, and environment variables</p>
+        </header>
+
+        <div class="module-content">
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>Request methods and when to use them</li>
+                <li>Headers and authentication</li>
+                <li>Request body formats</li>
+                <li>Environment variable management</li>
+            </ul>
+
+            <h2>Bruno Collection Structure</h2>
+            <div class="code-block">
+collections/module3-api-components/
+├── bruno.json
+├── environments/
+│   └── local.bru
+└── requests/
+    ├── 01-authentication.bru
+    └── 02-protected-endpoint.bru
+            </div>
+
+            <h2>Request Examples</h2>
+
+            <div class="endpoint-example">
+                <h4>1. Authentication Example</h4>
+                <p><span class="method">POST</span> <span class="url">{{baseUrl}}/api/module3/auth/login</span></p>
+                <p>Learn how to authenticate with an API and receive a token for subsequent requests.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>2. Protected Endpoint</h4>
+                <p><span class="method">GET</span> <span class="url">{{baseUrl}}/api/module3/protected</span></p>
+                <p>Learn how to access protected resources using authentication tokens.</p>
+            </div>
+
+            <h2>Authentication Flow</h2>
+            <ol>
+                <li><strong>Login:</strong> Send credentials to get a token</li>
+                <li><strong>Token Storage:</strong> Save the token in environment variables</li>
+                <li><strong>Authorization:</strong> Use token in headers for protected endpoints</li>
+            </ol>
+
+            <h2>Key Concepts</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>🔐 Authentication Types</h3>
+                    <ul>
+                        <li><strong>Basic Auth:</strong> Username/password</li>
+                        <li><strong>Bearer Token:</strong> Token-based auth</li>
+                        <li><strong>API Key:</strong> Simple key authentication</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h3>📋 Header Management</h3>
+                    <ul>
+                        <li><strong>Content-Type:</strong> application/json</li>
+                        <li><strong>Authorization:</strong> Bearer token</li>
+                        <li><strong>Custom Headers:</strong> X-API-Key, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h3>📝 Body Formats</h3>
+                    <ul>
+                        <li><strong>JSON:</strong> Structured data</li>
+                        <li><strong>Form Data:</strong> Key-value pairs</li>
+                        <li><strong>Raw:</strong> Plain text</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <a href="/module/2" class="btn btn-secondary">← Previous: Bruno Client</a>
+                <a href="/module/4" class="btn">Next: File System →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

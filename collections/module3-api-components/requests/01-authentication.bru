@@ -1,0 +1,58 @@
+meta {
+  name: Authentication Example
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/module3/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "student",
+    "password": "workshop2024"
+  }
+}
+
+docs {
+  # Authentication Example - Login and Token Management
+
+  This request demonstrates how to authenticate with an API and receive a token for subsequent requests.
+
+  ## Authentication Flow:
+  1. **Login**: Send credentials to get a token
+  2. **Token Storage**: Save the token for future requests
+  3. **Authorization**: Use token in headers for protected endpoints
+
+  ## Bruno Authentication Features:
+  - **Environment Variables**: Store tokens securely
+  - **Header Management**: Easy authorization header setup
+  - **Token Refresh**: Handle token expiration
+
+  ## Try it:
+  1. Send the login request
+  2. Copy the token from the response
+  3. Update the {{authToken}} variable in your environment
+  4. Use the token in subsequent requests
+
+  ## Expected Response:
+  ```json
+  {
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "expires_in": 3600,
+    "message": "Login successful!"
+  }
+  ```
+
+  ## Key Concepts:
+  - **Bearer Token**: Authorization header format
+  - **Token Expiration**: Tokens have limited lifetime
+  - **Environment Variables**: Secure token storage
+
+  ## Exercise:
+  After getting the token, update your environment variable and try the protected endpoint.
+}

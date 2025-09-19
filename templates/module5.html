@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5: Git Integrated API Client</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Module 5: Git Integrated API Client</h1>
+            <p>Collaborative API development using Git with Bruno collections</p>
+        </header>
+
+        <div class="module-content">
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>Version control for API collections</li>
+                <li>Team collaboration workflows</li>
+                <li>Collection sharing strategies</li>
+                <li>Merge conflict resolution</li>
+            </ul>
+
+            <h2>Git Integration Benefits</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <h3>📚 Version History</h3>
+                    <p>Track all changes to your API collections over time.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>👥 Team Collaboration</h3>
+                    <p>Share collections via Git repositories and work together.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🌿 Branch Management</h3>
+                    <p>Work on different API versions using Git branches.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🔀 Merge Conflicts</h3>
+                    <p>Handle simultaneous changes to collections gracefully.</p>
+                </div>
+            </div>
+
+            <h2>Bruno + Git Workflow</h2>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <h3>1. Initialize Git</h3>
+                    <div class="code-block">
+cd your-bruno-collection
+git init
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <h3>2. Add Files</h3>
+                    <div class="code-block">
+git add .
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <h3>3. Commit Changes</h3>
+                    <div class="code-block">
+git commit -m "Add new API endpoints for user management"
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <h3>4. Push to Remote</h3>
+                    <div class="code-block">
+git remote add origin https://github.com/your-team/api-collections.git
+git push -u origin main
+                    </div>
+                </div>
+
+                <div class="workflow-step">
+                    <h3>5. Pull Updates</h3>
+                    <div class="code-block">
+git pull origin main
+                    </div>
+                </div>
+            </div>
+
+            <h2>Collection Files in Git</h2>
+            <div class="code-block">
+.git/
+├── bruno.json
+├── environments/
+│   ├── local.bru
+│   └── production.bru
+└── requests/
+    ├── 01-get-users.bru
+    ├── 02-create-user.bru
+    └── auth/
+        └── login.bru
+            </div>
+
+            <h2>Team Collaboration Strategies</h2>
+            <div class="strategy-grid">
+                <div class="strategy-card">
+                    <h3>🏢 Organization-Wide</h3>
+                    <p>Single repository for all API collections with clear folder structure.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>👨‍💻 Team-Specific</h3>
+                    <p>Separate repositories for different teams or projects.</p>
+                </div>
+
+                <div class="strategy-card">
+                    <h3>🔧 Service-Based</h3>
+                    <p>Collections organized by microservice or API service.</p>
+                </div>
+            </div>
+
+            <h2>Best Practices</h2>
+            <ol>
+                <li><strong>Clear Commit Messages:</strong> Describe what API changes were made</li>
+                <li><strong>Branch Strategy:</strong> Use feature branches for new endpoints</li>
+                <li><strong>Review Process:</strong> Use pull requests to review API changes</li>
+                <li><strong>Documentation:</strong> Keep request documentation up to date</li>
+                <li><strong>Environment Management:</strong> Separate environments for different stages</li>
+            </ol>
+
+            <h2>Common Git Commands for Bruno</h2>
+            <div class="code-block">
+# Initialize a new collection repository
+git init
+git add .
+git commit -m "Initial API collection"
+
+# Add new requests
+git add requests/new-endpoint.bru
+git commit -m "Add new endpoint for user authentication"
+
+# Update environment variables
+git add environments/production.bru
+git commit -m "Update production environment variables"
+
+# Sync with team
+git pull origin main
+git push origin main
+            </div>
+
+            <div class="navigation">
+                <a href="/module/4" class="btn btn-secondary">← Previous: File System</a>
+                <a href="/escape-room" class="btn">Next: Escape Room Challenge →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

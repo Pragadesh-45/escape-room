@@ -1,0 +1,65 @@
+meta {
+  name: Collection Structure Demo
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/module4/collections
+  body: none
+  auth: none
+}
+
+docs {
+  # Collection Structure - Understanding Bruno's File System Approach
+
+  This request demonstrates how Bruno organizes API collections using a file system approach.
+
+  ## Bruno Collection Structure:
+  ```
+  my-collection/
+  ├── bruno.json          # Collection metadata
+  ├── environments/        # Environment variables
+  │   ├── local.bru
+  │   └── production.bru
+  └── requests/            # API requests
+      ├── 01-get-users.bru
+      ├── 02-create-user.bru
+      └── folders/         # Organized in folders
+          └── auth/
+              └── login.bru
+  ```
+
+  ## Key Benefits:
+  - **Version Control**: Easy Git integration
+  - **Team Collaboration**: Share collections via Git
+  - **Organization**: Folder structure for logical grouping
+  - **Portability**: Works offline, no cloud dependency
+
+  ## File Formats:
+  - **bruno.json**: Collection configuration
+  - **environment.bru**: Environment variables
+  - **request.bru**: Individual API requests
+
+  ## Try it:
+  1. Send the request to see collection structure
+  2. Look at your Bruno collection folder
+  3. Notice how requests are organized
+
+  ## Expected Response:
+  ```json
+  {
+    "collections": [
+      {
+        "name": "Workshop Collection",
+        "path": "/collections/workshop",
+        "requests": 6,
+        "folders": 2
+      }
+    ]
+  }
+  ```
+
+  ## Exercise:
+  Create a new folder in your Bruno collection and organize requests by category.
+}

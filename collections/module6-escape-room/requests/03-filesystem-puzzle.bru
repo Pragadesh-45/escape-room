@@ -1,0 +1,79 @@
+meta {
+  name: File System Puzzle
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/module6/filesystem-puzzle
+  body: none
+  auth: none
+}
+
+docs {
+  # File System Puzzle - Understanding Bruno's File-Based Approach
+
+  This puzzle teaches you about Bruno's file-based collection storage.
+
+  ## What You'll Learn:
+  - Bruno's file-based storage system
+  - Collection organization structure
+  - Benefits of file-based approach
+  - Version control integration
+
+  ## The Challenge:
+  Look at the collection structure in the response and answer: How does Bruno's file-based approach help with version control?
+
+  ## Bruno Collection Structure:
+  ```
+  workshop-collection/
+  ├── bruno.json          # Collection metadata
+  ├── environments/        # Environment variables
+  │   ├── local.bru
+  │   └── production.bru
+  └── requests/            # API requests
+      ├── 01-hello-world.bru
+      ├── 02-get-users.bru
+      └── auth/
+          └── login.bru
+  ```
+
+  ## Key Benefits:
+  - **Version Control**: Files can be tracked by Git
+  - **Team Collaboration**: Share collections via repositories
+  - **Portability**: Works offline, no cloud dependency
+  - **Transparency**: Human-readable file formats
+
+  ## Try it:
+  1. Send the request to see the collection structure
+  2. Think about how files differ from databases
+  3. Submit your answer about version control benefits
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "Explore Bruno's file-based approach!",
+    "collection_structure": {
+      "workshop-collection/": {
+        "bruno.json": "Collection metadata",
+        "environments/": {
+          "local.bru": "Local environment variables",
+          "production.bru": "Production environment variables"
+        },
+        "requests/": {
+          "01-hello-world.bru": "Hello world request",
+          "02-get-users.bru": "Get users request",
+          "auth/": {
+            "login.bru": "Authentication request"
+          }
+        }
+      }
+    },
+    "challenge": "How does Bruno's file-based approach help with version control?",
+    "hint": "Think about what makes files different from databases"
+  }
+  ```
+
+  ## Solution Hint:
+  Files can be tracked, compared, and merged by version control systems like Git.
+}

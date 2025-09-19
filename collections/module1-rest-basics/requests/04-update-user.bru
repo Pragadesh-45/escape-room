@@ -1,0 +1,51 @@
+meta {
+  name: Update User
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/module1/users/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Alice Updated",
+    "role": "instructor"
+  }
+}
+
+docs {
+  # Update User - PUT Request
+
+  This request demonstrates how to update existing resources using the PUT method. You're sending updated data to replace the existing user information.
+
+  ## What you'll learn:
+  - PUT method for updating resources
+  - Complete resource replacement
+  - Server response to successful updates
+
+  ## Try it:
+  1. Send the request to update user ID 1
+  2. Try updating different user IDs (1, 2, 3)
+  3. Try updating a non-existent user (ID 999)
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "User 1 updated successfully",
+    "updated_fields": ["name", "role"],
+    "timestamp": "2024-01-01T12:00:00"
+  }
+  ```
+
+  ## Key Concepts:
+  - **PUT**: Updates/replaces entire resources
+  - **Idempotent**: Same request produces same result
+  - **Resource Replacement**: Entire resource is replaced, not merged
+
+  ## Exercise:
+  Update user ID 2 with new information. What happens if you try to update user ID 999?
+}

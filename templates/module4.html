@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: File System Based Approach</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Module 4: File System Based Approach</h1>
+            <p>Understanding how Bruno stores collections as files and folders</p>
+        </header>
+
+        <div class="module-content">
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>Collection structure</li>
+                <li>File-based storage</li>
+                <li>Organization best practices</li>
+                <li>Version control integration</li>
+            </ul>
+
+            <h2>Bruno Collection Structure</h2>
+            <div class="code-block">
+collections/module4-filesystem/
+├── bruno.json          # Collection metadata
+├── environments/        # Environment variables
+│   ├── local.bru
+│   └── production.bru
+└── requests/            # API requests
+    ├── 01-get-users.bru
+    ├── 02-create-user.bru
+    └── folders/         # Organized in folders
+        └── auth/
+            └── login.bru
+            </div>
+
+            <h2>Key Benefits</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <h3>🔄 Version Control</h3>
+                    <p>Easy Git integration for tracking changes and collaborating with teams.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>👥 Team Collaboration</h3>
+                    <p>Share collections via Git repositories and merge changes easily.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>📁 Organization</h3>
+                    <p>Folder structure for logical grouping of related requests.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>💾 Portability</h3>
+                    <p>Works offline, no cloud dependency, complete control over your data.</p>
+                </div>
+            </div>
+
+            <h2>File Formats</h2>
+            <div class="file-format">
+                <h3>bruno.json</h3>
+                <p>Collection configuration and metadata</p>
+                <div class="code-block">
+{
+  "version": "1",
+  "name": "My API Collection",
+  "type": "collection"
+}
+                </div>
+            </div>
+
+            <div class="file-format">
+                <h3>environment.bru</h3>
+                <p>Environment variables and configuration</p>
+                <div class="code-block">
+vars {
+  baseUrl: http://localhost:8000
+  apiVersion: v1
+  authToken: your-token-here
+}
+                </div>
+            </div>
+
+            <div class="file-format">
+                <h3>request.bru</h3>
+                <p>Individual API request definition</p>
+                <div class="code-block">
+meta {
+  name: Get Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/users
+  body: none
+  auth: none
+}
+                </div>
+            </div>
+
+            <h2>Best Practices</h2>
+            <ol>
+                <li><strong>Organize by Feature:</strong> Group related requests in folders</li>
+                <li><strong>Use Descriptive Names:</strong> Clear, meaningful request names</li>
+                <li><strong>Environment Separation:</strong> Different environments for different stages</li>
+                <li><strong>Documentation:</strong> Add docs to explain complex requests</li>
+                <li><strong>Version Control:</strong> Use Git to track changes and collaborate</li>
+            </ol>
+
+            <div class="navigation">
+                <a href="/module/3" class="btn btn-secondary">← Previous: API Components</a>
+                <a href="/module/5" class="btn">Next: Git Integration →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

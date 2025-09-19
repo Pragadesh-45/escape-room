@@ -1,0 +1,69 @@
+meta {
+  name: Open Source Puzzle
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/module6/opensource-puzzle
+  body: none
+  auth: none
+}
+
+docs {
+  # Open Source Puzzle - Understanding Bruno's Open Source Nature
+
+  This puzzle teaches you about Bruno's open source philosophy and benefits.
+
+  ## What You'll Learn:
+  - Bruno's open source nature
+  - Benefits of open source software
+  - Community-driven development
+  - Privacy and transparency advantages
+
+  ## The Challenge:
+  Look at the open source facts in the response and answer: What are the main advantages of Bruno being open source?
+
+  ## Bruno Open Source Facts:
+  - **License**: MIT License (permissive and free)
+  - **GitHub Stars**: 37k+ (popular and trusted)
+  - **Contributors**: 345+ (active community)
+  - **Features**: Free, privacy-focused, community-driven
+
+  ## Key Advantages:
+  - **Privacy**: No data sent to external servers
+  - **Transparency**: Source code is visible and auditable
+  - **Customization**: Can modify and extend functionality
+  - **Community**: Large community of contributors and users
+  - **Cost**: Completely free to use
+  - **Reliability**: No vendor lock-in or service dependencies
+
+  ## Try it:
+  1. Send the request to see open source facts
+  2. Think about advantages of open source software
+  3. Submit your answer about the main benefits
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "Learn about Bruno's open source nature!",
+    "opensource_facts": {
+      "license": "MIT License",
+      "github_stars": "37k+",
+      "contributors": "345+",
+      "features": [
+        "Free and open source",
+        "No cloud dependency",
+        "Privacy-focused",
+        "Community-driven"
+      ],
+      "alternatives": ["Postman", "Insomnia", "Thunder Client"]
+    },
+    "challenge": "What are the main advantages of Bruno being open source?",
+    "hint": "Think about privacy, customization, and community"
+  }
+  ```
+
+  ## Solution Hint:
+  Think about privacy, customization, community support, and transparency.
+}

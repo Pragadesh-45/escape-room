@@ -1,0 +1,58 @@
+meta {
+  name: Headers Demonstration
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/module2/headers
+  body: none
+  auth: none
+}
+
+headers {
+  X-Custom-Header: Hello Bruno
+  User-Agent: Bruno-Workshop/1.0
+  Accept: application/json
+}
+
+docs {
+  # Headers Demonstration - Understanding Request Headers
+
+  This request shows how Bruno handles HTTP headers and how servers can read them.
+
+  ## What are HTTP Headers?
+  Headers are key-value pairs that provide additional information about the request or response.
+
+  ## Bruno Headers Panel:
+  - **Key**: Header name (e.g., "Content-Type")
+  - **Value**: Header value (e.g., "application/json")
+  - **Add/Remove**: Easy header management
+
+  ## Common Headers:
+  - **Content-Type**: What type of data you're sending
+  - **Accept**: What type of data you want back
+  - **Authorization**: Authentication credentials
+  - **User-Agent**: Information about your client
+
+  ## Try it:
+  1. Send the request with the pre-configured headers
+  2. Add your own custom header
+  3. Remove a header and see how the response changes
+
+  ## Expected Response:
+  ```json
+  {
+    "received_headers": {
+      "x-custom-header": "Hello Bruno",
+      "user-agent": "Bruno-Workshop/1.0",
+      "accept": "application/json",
+      "host": "localhost:8000"
+    },
+    "message": "Headers successfully received!"
+  }
+  ```
+
+  ## Exercise:
+  Add a header called "X-Workshop-Student" with your name as the value.
+}

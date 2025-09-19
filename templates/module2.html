@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Bruno API Client</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Module 2: Bruno API Client</h1>
+            <p>Introduction to Bruno and its core features</p>
+        </header>
+
+        <div class="module-content">
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>Bruno interface overview</li>
+                <li>Creating and organizing requests</li>
+                <li>Environment management</li>
+                <li>Request/response visualization</li>
+            </ul>
+
+            <h2>Bruno Interface Overview</h2>
+            <div class="interface-guide">
+                <div class="interface-section">
+                    <h3>📁 Collection Panel (Left)</h3>
+                    <ul>
+                        <li>Organize requests in folders</li>
+                        <li>Environment variables</li>
+                        <li>Collection settings</li>
+                    </ul>
+                </div>
+
+                <div class="interface-section">
+                    <h3>📝 Request Panel (Center)</h3>
+                    <ul>
+                        <li>HTTP method selection</li>
+                        <li>URL input field</li>
+                        <li>Headers management</li>
+                        <li>Request body editor</li>
+                    </ul>
+                </div>
+
+                <div class="interface-section">
+                    <h3>📊 Response Panel (Right)</h3>
+                    <ul>
+                        <li>Status code display</li>
+                        <li>Response body (JSON/formatted)</li>
+                        <li>Response headers</li>
+                        <li>Request timing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Bruno Collection Structure</h2>
+            <div class="code-block">
+collections/module2-bruno-client/
+├── bruno.json
+├── environments/
+│   └── local.bru
+└── requests/
+    ├── 01-api-status.bru
+    ├── 02-headers-demo.bru
+    └── 03-echo-request.bru
+            </div>
+
+            <h2>Request Examples</h2>
+
+            <div class="endpoint-example">
+                <h4>1. Check API Status</h4>
+                <p><span class="method">GET</span> <span class="url">{{baseUrl}}/api/module2/status</span></p>
+                <p>Learn Bruno's interface components and how to send requests.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>2. Headers Demonstration</h4>
+                <p><span class="method">GET</span> <span class="url">{{baseUrl}}/api/module2/headers</span></p>
+                <p>Understand how Bruno handles HTTP headers and how servers read them.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>3. Echo Request</h4>
+                <p><span class="method">POST</span> <span class="url">{{baseUrl}}/api/module2/echo</span></p>
+                <p>See how Bruno sends complete request information including body and headers.</p>
+            </div>
+
+            <h2>Environment Variables</h2>
+            <p>Bruno uses environment variables to make requests reusable and maintainable:</p>
+            <div class="code-block">
+vars {
+  baseUrl: http://localhost:8000
+  apiVersion: v1
+}
+            </div>
+            <p>Use variables in requests with <code>{{variableName}}</code> syntax.</p>
+
+            <h2>Key Bruno Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Environment Management</h3>
+                    <p>Switch between different environments (local, staging, production) easily.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📁 File-Based Collections</h3>
+                    <p>Collections are stored as files, making them version-controllable with Git.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔍 Request History</h3>
+                    <p>Bruno keeps track of your request history for easy reference.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📝 Documentation</h3>
+                    <p>Add documentation directly to your requests using Markdown.</p>
+                </div>
+            </div>
+
+            <h2>Exercises</h2>
+            <ol>
+                <li>Send the API Status request and explore the response panel</li>
+                <li>Add custom headers to the Headers Demo request</li>
+                <li>Modify the Echo Request body with your information</li>
+                <li>Create a new environment variable and use it in a request</li>
+                <li>Add documentation to one of your requests</li>
+            </ol>
+
+            <div class="navigation">
+                <a href="/module/1" class="btn btn-secondary">← Previous: REST Basics</a>
+                <a href="/module/3" class="btn">Next: API Components →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

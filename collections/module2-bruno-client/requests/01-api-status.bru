@@ -1,0 +1,54 @@
+meta {
+  name: Check API Status
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/module2/status
+  body: none
+  auth: none
+}
+
+docs {
+  # Check API Status - Bruno Interface Overview
+
+  This request helps you understand Bruno's interface and how to interact with APIs.
+
+  ## Bruno Interface Components:
+
+  ### 1. Request Panel (Left Side)
+  - **Method Dropdown**: Choose HTTP method (GET, POST, PUT, DELETE)
+  - **URL Field**: Enter the endpoint URL
+  - **Send Button**: Execute the request
+
+  ### 2. Response Panel (Right Side)
+  - **Status Code**: HTTP response status (200, 404, 500, etc.)
+  - **Response Body**: JSON data returned by the server
+  - **Headers**: Response headers from the server
+  - **Time**: How long the request took
+
+  ### 3. Environment Variables
+  - **{{baseUrl}}**: Reusable variable for the base URL
+  - **{{apiVersion}}**: Version variable for API endpoints
+
+  ## Try it:
+  1. Click the "Send" button
+  2. Observe the response in the right panel
+  3. Check the status code and response time
+
+  ## Expected Response:
+  ```json
+  {
+    "status": "online",
+    "version": "1.0.0",
+    "features": ["GET", "POST", "PUT", "DELETE", "Headers", "Authentication"]
+  }
+  ```
+
+  ## Bruno Features You'll Learn:
+  - Environment variables for reusable values
+  - Request/response visualization
+  - History tracking
+  - Collection organization
+}

@@ -1,0 +1,50 @@
+meta {
+  name: Delete User
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/api/module1/users/1
+  body: none
+  auth: none
+}
+
+docs {
+  # Delete User - DELETE Request
+
+  This request demonstrates how to remove resources using the DELETE method. You're telling the server to delete a specific user.
+
+  ## What you'll learn:
+  - DELETE method for removing resources
+  - No request body needed for deletion
+  - Server response to successful deletion
+
+  ## Try it:
+  1. Send the request to delete user ID 1
+  2. Try deleting different user IDs (1, 2, 3)
+  3. Try deleting a non-existent user (ID 999)
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "User 1 deleted successfully"
+  }
+  ```
+
+  ## Key Concepts:
+  - **DELETE**: Removes resources from the server
+  - **No Body**: DELETE requests typically don't need a body
+  - **Destructive Operation**: Cannot be undone
+
+  ## Exercise:
+  Try deleting user ID 2. What happens if you try to delete user ID 999?
+
+  ## CRUD Operations Summary:
+  - **C**reate: POST
+  - **R**ead: GET
+  - **U**pdate: PUT
+  - **D**elete: DELETE
+
+  You've now learned all four basic HTTP methods!
+}

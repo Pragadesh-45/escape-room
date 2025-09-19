@@ -1,0 +1,60 @@
+meta {
+  name: Git Status Demo
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/module5/git/status
+  body: none
+  auth: none
+}
+
+docs {
+  # Git Status Demo - Version Control for API Collections
+
+  This request demonstrates how Bruno collections work with Git for version control and team collaboration.
+
+  ## Git Integration Benefits:
+  - **Version History**: Track changes to API collections
+  - **Team Collaboration**: Share collections via Git repositories
+  - **Branch Management**: Work on different API versions
+  - **Merge Conflicts**: Handle simultaneous changes
+
+  ## Bruno + Git Workflow:
+  1. **Initialize Git**: `git init` in collection folder
+  2. **Add Files**: `git add .` to stage collection files
+  3. **Commit Changes**: `git commit -m "Add new API endpoints"`
+  4. **Push to Remote**: `git push` to share with team
+  5. **Pull Updates**: `git pull` to get team changes
+
+  ## Collection Files in Git:
+  ```
+  .git/
+  ├── bruno.json
+  ├── environments/
+  │   └── local.bru
+  └── requests/
+      ├── 01-get-users.bru
+      └── 02-create-user.bru
+  ```
+
+  ## Try it:
+  1. Send the request to see Git status simulation
+  2. Initialize Git in your collection folder
+  3. Make changes and commit them
+
+  ## Expected Response:
+  ```json
+  {
+    "repository": "api-escape-room-workshop",
+    "branch": "main",
+    "status": "clean",
+    "last_commit": "Added new API endpoints for workshop",
+    "collections_tracked": ["workshop", "practice", "escape-room"]
+  }
+  ```
+
+  ## Exercise:
+  Initialize a Git repository in your Bruno collection folder and make your first commit.
+}

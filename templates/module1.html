@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: REST API Basics</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Module 1: REST API Basics</h1>
+            <p>Learn the fundamentals of REST APIs through hands-on examples</p>
+        </header>
+
+        <div class="module-content">
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>HTTP Methods (GET, POST, PUT, DELETE)</li>
+                <li>Request/Response patterns</li>
+                <li>Status codes and error handling</li>
+                <li>Path parameters and request bodies</li>
+            </ul>
+
+            <h2>Getting Started</h2>
+            <ol>
+                <li>Open Bruno and import the "Module 1: REST API Basics" collection</li>
+                <li>Make sure the FastAPI server is running on <code>http://localhost:8000</code></li>
+                <li>Start with the "Hello World" request</li>
+            </ol>
+
+            <h2>Bruno Collection Structure</h2>
+            <div class="code-block">
+collections/module1-rest-basics/
+├── bruno.json
+├── environments/
+│   └── local.bru
+└── requests/
+    ├── 01-hello-world.bru
+    ├── 02-get-user.bru
+    ├── 03-create-user.bru
+    ├── 04-update-user.bru
+    └── 05-delete-user.bru
+            </div>
+
+            <h2>Request Examples</h2>
+
+            <div class="endpoint-example">
+                <h4>1. Hello World - Basic GET Request</h4>
+                <p><span class="method">GET</span> <span class="url">{{baseUrl}}/api/module1/hello</span></p>
+                <p>Your first API call! Learn the basic request/response pattern.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>2. Get User by ID - Path Parameters</h4>
+                <p><span class="method">GET</span> <span class="url">{{baseUrl}}/api/module1/user/{user_id}</span></p>
+                <p>Learn how to use path parameters in URLs. Try different user IDs: 1, 2, 3, 999.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>3. Create User - POST Request</h4>
+                <p><span class="method">POST</span> <span class="url">{{baseUrl}}/api/module1/users</span></p>
+                <p>Learn how to send data to create new resources. Modify the JSON body with your information.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>4. Update User - PUT Request</h4>
+                <p><span class="method">PUT</span> <span class="url">{{baseUrl}}/api/module1/users/{user_id}</span></p>
+                <p>Learn how to update existing resources. Try updating different users.</p>
+            </div>
+
+            <div class="endpoint-example">
+                <h4>5. Delete User - DELETE Request</h4>
+                <p><span class="method">DELETE</span> <span class="url">{{baseUrl}}/api/module1/users/{user_id}</span></p>
+                <p>Learn how to remove resources. Understand the CRUD operations.</p>
+            </div>
+
+            <h2>Key Concepts</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>HTTP Methods</h3>
+                    <ul>
+                        <li><strong>GET:</strong> Retrieve data</li>
+                        <li><strong>POST:</strong> Create new resources</li>
+                        <li><strong>PUT:</strong> Update existing resources</li>
+                        <li><strong>DELETE:</strong> Remove resources</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Status Codes</h3>
+                    <ul>
+                        <li><strong>200:</strong> Success</li>
+                        <li><strong>201:</strong> Created</li>
+                        <li><strong>400:</strong> Bad Request</li>
+                        <li><strong>404:</strong> Not Found</li>
+                    </ul>
+                </div>
+
+                <div class="concept-card">
+                    <h3>Data Formats</h3>
+                    <ul>
+                        <li><strong>JSON:</strong> JavaScript Object Notation</li>
+                        <li><strong>Path Parameters:</strong> Values in URL</li>
+                        <li><strong>Request Body:</strong> Data sent to server</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Exercises</h2>
+            <ol>
+                <li>Send the Hello World request and observe the response</li>
+                <li>Try getting users with IDs 1, 2, 3, and 999. What happens?</li>
+                <li>Create a user with your name and favorite programming language</li>
+                <li>Update user ID 2 with new information</li>
+                <li>Try deleting a user and observe the response</li>
+            </ol>
+
+            <div class="navigation">
+                <a href="/" class="btn btn-secondary">← Back to Workshop</a>
+                <a href="/module/2" class="btn">Next: Bruno Client →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

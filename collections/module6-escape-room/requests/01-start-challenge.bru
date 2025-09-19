@@ -1,0 +1,55 @@
+meta {
+  name: Start Escape Room Challenge
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/module6/start?player_name=YourName&team=YourTeam
+  body: none
+  auth: none
+}
+
+docs {
+  # Start Escape Room Challenge - The Ultimate API Test
+
+  Welcome to the API Escape Room! This is where you'll put all your API knowledge to the test through 5 challenging puzzles.
+
+  ## Challenge Overview:
+  - **5 Puzzles**: Each puzzle tests different API concepts
+  - **Progressive Difficulty**: Each puzzle builds on the previous
+  - **Real-World Scenarios**: Practical API problems you might encounter
+  - **Team Competition**: Work with your team to escape first!
+
+  ## How to Play:
+  1. **Start the Challenge**: Send this request with your name and team
+  2. **Get Your Player ID**: Save the player_id from the response
+  3. **Solve Puzzles**: Use Bruno to solve each puzzle in sequence
+  4. **Track Progress**: Each puzzle gives you a clue for the next
+  5. **Escape**: Complete all 5 puzzles to escape!
+
+  ## Puzzle Types:
+  - **Header Analysis**: Find hidden information in response headers
+  - **Authentication**: Use tokens and authentication methods
+  - **Data Decoding**: Decode encrypted or encoded information
+  - **HTTP Methods**: Choose the correct method for the task
+  - **Final Challenge**: Combine all your knowledge
+
+  ## Try it:
+  1. Replace "YourName" and "YourTeam" with your actual information
+  2. Send the request to start the challenge
+  3. Save your player_id for future requests
+
+  ## Expected Response:
+  ```json
+  {
+    "player_id": "a1b2c3d4",
+    "message": "Welcome to the API Escape Room!",
+    "first_clue": "Find the hidden message in the response headers",
+    "puzzle_count": 5
+  }
+  ```
+
+  ## Ready to Escape?
+  Update your environment variables with your player_id and let's begin!
+}

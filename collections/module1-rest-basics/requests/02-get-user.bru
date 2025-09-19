@@ -1,0 +1,44 @@
+meta {
+  name: Get User by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/module1/user/1
+  body: none
+  auth: none
+}
+
+docs {
+  # Get User by ID - Path Parameters
+
+  This request demonstrates how to use path parameters in API calls. The user ID is part of the URL path.
+
+  ## What you'll learn:
+  - Path parameters in URLs
+  - How to handle different user IDs
+  - Error responses (404 Not Found)
+
+  ## Try it:
+  1. Send the request with user ID 1
+  2. Try changing the URL to `/api/module1/user/2` and send again
+  3. Try `/api/module1/user/999` to see a 404 error
+
+  ## Expected Response (user ID 1):
+  ```json
+  {
+    "id": 1,
+    "name": "Alice",
+    "role": "student"
+  }
+  ```
+
+  ## Key Concepts:
+  - **Path Parameters**: Values in the URL path (like `/user/1`)
+  - **404 Error**: Resource not found
+  - **Dynamic URLs**: URLs that change based on parameters
+
+  ## Exercise:
+  Try different user IDs: 1, 2, 3, and 999. What happens with each?
+}

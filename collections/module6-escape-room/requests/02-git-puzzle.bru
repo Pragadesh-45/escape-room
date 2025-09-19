@@ -1,0 +1,63 @@
+meta {
+  name: Git Integration Puzzle
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/module6/git-puzzle
+  body: none
+  auth: none
+}
+
+docs {
+  # Git Integration Puzzle - Understanding Version Control
+
+  This puzzle teaches you about Git integration with Bruno collections.
+
+  ## What You'll Learn:
+  - How Bruno collections work with Git
+  - Version control for API collections
+  - Team collaboration workflows
+  - File-based storage benefits
+
+  ## The Challenge:
+  Look at the Git information in the response and answer: What command would you use to commit changes to your Bruno collection?
+
+  ## Git Workflow with Bruno:
+  1. **Initialize Git**: `git init` in your collection folder
+  2. **Add Files**: `git add .` to stage collection files
+  3. **Commit Changes**: `git commit -m "message"`
+  4. **Push to Remote**: `git push` to share with team
+  5. **Pull Updates**: `git pull` to get team changes
+
+  ## Key Benefits:
+  - **Version History**: Track all changes over time
+  - **Team Collaboration**: Share collections via Git
+  - **Branch Management**: Work on different API versions
+  - **Merge Conflicts**: Handle simultaneous changes
+
+  ## Try it:
+  1. Send the request to see Git information
+  2. Think about Git commands
+  3. Submit your answer about the commit command
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "Welcome to the Git puzzle!",
+    "git_info": {
+      "repository": "api-workshop-collections",
+      "branch": "main",
+      "last_commit": "Added new API endpoints",
+      "files_tracked": ["bruno.json", "requests/", "environments/"],
+      "collaborators": ["team-lead", "api-developer", "qa-engineer"]
+    },
+    "challenge": "What command would you use to commit changes to your Bruno collection?",
+    "hint": "Think about Git's basic workflow commands"
+  }
+  ```
+
+  ## Solution Hint:
+  The answer involves the `git commit` command with a message parameter.
+}

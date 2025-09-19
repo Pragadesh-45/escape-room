@@ -1,0 +1,81 @@
+meta {
+  name: Bruno Mastery Puzzle
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/module6/bruno-puzzle
+  body: none
+  auth: none
+}
+
+docs {
+  # Bruno Mastery Puzzle - Advanced Bruno Features
+
+  This puzzle teaches you about Bruno's advanced features and capabilities.
+
+  ## What You'll Learn:
+  - Bruno's core and advanced features
+  - Collaboration capabilities
+  - Offline-first approach benefits
+  - Professional workflow integration
+
+  ## The Challenge:
+  Look at Bruno's features in the response and answer: How does Bruno's offline-first approach benefit teams?
+
+  ## Bruno Core Features:
+  - **File-based collections**: Stored as files and folders
+  - **Environment variables**: Reusable configuration
+  - **Request history**: Track all API calls
+  - **Team collaboration**: Via Git integration
+
+  ## Advanced Features:
+  - **Scripts and hooks**: Pre-request and post-response scripts
+  - **Collection documentation**: Rich documentation support
+  - **Import/export**: Multiple format support
+  - **Offline-first**: Works without internet connection
+
+  ## Collaboration Features:
+  - **Git integration**: Version control for collections
+  - **Shared collections**: Team-wide collection sharing
+  - **Version control**: Track changes over time
+  - **Merge conflict resolution**: Handle simultaneous changes
+
+  ## Try it:
+  1. Send the request to see Bruno's features
+  2. Think about offline-first benefits
+  3. Submit your answer about team benefits
+
+  ## Expected Response:
+  ```json
+  {
+    "message": "Master Bruno's advanced features!",
+    "bruno_features": {
+      "core_features": [
+        "File-based collections",
+        "Environment variables",
+        "Request history",
+        "Team collaboration via Git"
+      ],
+      "advanced_features": [
+        "Scripts and pre-request hooks",
+        "Collection documentation",
+        "Import/export capabilities",
+        "Offline-first approach"
+      ],
+      "collaboration": [
+        "Git integration",
+        "Shared collections",
+        "Version control",
+        "Merge conflict resolution"
+      ]
+    },
+    "challenge": "How does Bruno's offline-first approach benefit teams?",
+    "hint": "Think about reliability and data ownership"
+  }
+  ```
+
+  ## Solution Hint:
+  Think about reliability, data ownership, and independence from external services.
+}

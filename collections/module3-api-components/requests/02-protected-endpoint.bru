@@ -1,0 +1,61 @@
+meta {
+  name: Protected Endpoint
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/module3/protected
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{authToken}}
+}
+
+docs {
+  # Protected Endpoint - Using Authentication Tokens
+
+  This request demonstrates how to access protected resources using the authentication token.
+
+  ## Authorization Header Format:
+  ```
+  Authorization: Bearer your-token-here
+  ```
+
+  ## Bruno Authorization Setup:
+  1. **Manual Headers**: Add Authorization header manually
+  2. **Environment Variables**: Use {{authToken}} for dynamic tokens
+  3. **Auth Tab**: Bruno's built-in auth management
+
+  ## Try it:
+  1. First, get a token from the login request
+  2. Update {{authToken}} in your environment
+  3. Send this request
+  4. Try without the Authorization header to see the error
+
+  ## Expected Response (with valid token):
+  ```json
+  {
+    "message": "Access granted to protected resource",
+    "data": "This is sensitive information",
+    "timestamp": "2024-01-01T12:00:00"
+  }
+  ```
+
+  ## Expected Response (without token):
+  ```json
+  {
+    "detail": "Bearer token required"
+  }
+  ```
+
+  ## Key Concepts:
+  - **Bearer Authentication**: Token-based auth
+  - **Protected Resources**: Endpoints requiring authentication
+  - **Error Handling**: 401 Unauthorized responses
+
+  ## Exercise:
+  Try accessing this endpoint without the Authorization header. What happens?
+}
